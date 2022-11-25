@@ -1,5 +1,6 @@
-/*También se pudo traer de la siguiente manera*/
-/*import cities from "./input.json";*/
 import json from "./fetch.js";
+import scroll from "./scroll.js";
 
-console.log(json.id)
+console.log(json);
+
+scroll();

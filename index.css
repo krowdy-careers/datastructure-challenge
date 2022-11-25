@@ -56,19 +56,20 @@ input{
 }
 
 .container_card{
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
     
 }
 
 .card {
     display: flex;
     flex-direction: column;
-    padding: 1%;
+    padding: 5%;
+    margin: 3%;
     gap: 15px;
-    width: 190px;
-    height: 254px;
     border-radius: 30px;
     background: var(--card);
     box-shadow: 15px 15px 30px var(--shadow),

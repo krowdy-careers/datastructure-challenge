@@ -5,7 +5,7 @@ let json = fetch(myRequest)
     return resp.json();
 })
 .then(function(data){
-    console.log(data.cities);
+    console.log(data);
 })
 
 export default json;
