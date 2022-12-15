@@ -69,7 +69,6 @@
 <p>Los participantes deberan hacer <a href="https://docs.github.com/es/get-started/quickstart/fork-a-repo">Fork</a> de este repositorio y crear un <a href="https://docs.github.com/es/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request">PR</a> para la revision del challenge.
 </p>
 
-<p>La resolucion del challenge tendra como fecha maxima de entrega el 30/09/2022</p>
 
 <p>Toda informacion o consulta debera ser realizada a traves de la creacion de un Issue en este repositorio</p>
 
