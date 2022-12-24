@@ -1,7 +1,11 @@
-import { readDataAsync } from "../../read-data/read-data-async.js";
-import { writeDataAsync } from "../../write-data/writeDataAsync.js";
+const readDataAsync = require("../../read-data/read-data-async");
+const writeDataAsync = require("../../write-data/writeDataAsync.js");
 
-export async function processJSONAsync(input_file, output_file, process_cb) {
+module.exports = async function processJSONAsync(
+  input_file,
+  output_file,
+  process_cb
+) {
   //Leer Input y Output Data
   let currentOutput = [];
   const inputData = await readDataAsync(input_file);
@@ -16,4 +20,4 @@ export async function processJSONAsync(input_file, output_file, process_cb) {
   //Guardar output data
   const outputString = JSON.stringify(currentOutput);
   await writeDataAsync(output_file, outputString);
-}
+};

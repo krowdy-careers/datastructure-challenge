@@ -1,6 +1,6 @@
-import { readFile } from "fs/promises";
+const { readFile } = require("fs/promises");
 
-export function readDataAsync(path) {
+module.exports = function readDataAsync(path) {
   return readFile(path)
     .then((data) => {
       const dataString = data.toString();
@@ -10,4 +10,4 @@ export function readDataAsync(path) {
       console.log("Error", err);
       return null;
     });
-}
+};

@@ -1,7 +1,7 @@
 {
   "name": "datastrucure-challenge",
   "version": "1.0.0",
-  "type": "module",
+  "type": "commonjs",
   "description": "<h1 align=\"center\"> Data Structure Challenge </h1> <h3 align=\"center\"> Instrucciones para la tarea de estructura de datos </h3> <h5 align=\"center\"> Telemática - <a href=\"#\">Challenge</a> (Setiembre 2022) </h5>",
   "main": "index.js",
   "scripts": {
@@ -19,9 +19,11 @@
   "homepage": "https://github.com/Edax97/datastructure-challenge#readme",
   "devDependencies": {
     "@types/node": "^18.11.17",
+    "eslint": "^8.30.0",
     "jest": "^29.3.1"
   },
   "dependencies": {
+    "stream-chain": "^2.2.5",
     "stream-json": "^1.7.5"
   }
 }
