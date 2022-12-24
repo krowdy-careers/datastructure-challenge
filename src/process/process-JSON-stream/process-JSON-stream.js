@@ -16,11 +16,11 @@ module.exports = function processJSONstream(
     parser(),
     pick({ filter: "cities" }),
     streamArray(),
-    ({ value }) => {
-      console.log(value.name);
-      processCB(value, output_path);
+    async ({ value }) => {
+      console.log("INPUT City", value.name);
+      await processCB(value, output_path);
     },
   ]);
 
-  inputStream.on("error", () => console.log("ERROR"));
+  inputStream.on("error", (err) => console.log("ERROR", err));
 };
