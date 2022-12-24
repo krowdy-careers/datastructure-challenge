@@ -1,13 +1,7 @@
-import { newCity } from "./data/mock-data/new-city.js";
-import { outputData } from "./data/mock-data/output-data.js";
-import { processData } from "./process-data/process-data.js";
-import { readDataAsync } from "./read-data/read-data-async.js";
+import { processCity } from "./process/process-city/process-city.js";
+import { processJSONAsync } from "./process/process-JSON-async/process-JSON-async.js";
 
-readDataAsync("./data/input-data/input.json").then((data) => {
-  console.log(data);
-});
+const INPUT_PATH = "./data/input-data/input.json";
+const OUTPUT_PATH = "./data/output-data/new-output.json";
 
-/* const processedData = processData(newCity, outputData);
-const processedData2 = processData(newCity, processedData);
-
-console.log(processedData2); */
+processJSONAsync(INPUT_PATH, OUTPUT_PATH, processCity);

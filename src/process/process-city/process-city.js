@@ -1,4 +1,4 @@
-export function processData(city, outputData) {
+export function processCity(city, outputData) {
   const { weather: weatherList, ...restCity } = city;
   const weather = weatherList[0] || null;
   if (!weather) return outputData;
