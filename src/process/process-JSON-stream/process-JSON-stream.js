@@ -11,13 +11,13 @@ module.exports = function processJSONstream(
   output_path,
   processCB
 ) {
+  //Escanear inputData. Para cada ciudad, aplicar processCB
   const inputStream = chain([
     fs.createReadStream(input_path, { encoding: "utf8" }),
     parser(),
     pick({ filter: "cities" }),
     streamArray(),
     async ({ value }) => {
-      console.log("INPUT City", value.name);
       await processCB(value, output_path);
     },
   ]);

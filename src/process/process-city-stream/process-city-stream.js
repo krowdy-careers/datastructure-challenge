@@ -3,30 +3,33 @@ const { chain } = require("stream-chain");
 const { parser } = require("stream-json");
 const { streamArray } = require("stream-json/streamers/StreamArray");
 
+const AUX_PATH = "data/output-data/aux_data.json";
+
 module.exports = async function processCityStream(city, output_file) {
   const { weather: weatherList, ...restCity } = city;
   const weather = weatherList[0] || null;
   if (!weather) return;
 
-  //Buscar clima in outputData.
+  //Crear readStream que escanee outputData
   let weatherFound = false;
-  const auxStream = createWriteStream("aux_file");
+  const auxStream = createWriteStream(AUX_PATH);
   auxStream.write("[");
   const outputStream = chain([
     createReadStream(output_file),
     parser(),
     streamArray(),
     ({ value }) => {
-      if (!value) {
+      //Ultimo elemento (null), si no hubo coindicencia, añadir nuevo clima.
+      if (value === null) {
         if (!weatherFound) {
           const itemString = JSON.stringify({ weather, cities: [restCity] });
           return itemString + ", null]";
         }
         return "null]";
       }
+      //Si hay coincidencia, añadir ciudad.
       if (value.weather.id === weather.id) {
         weatherFound = true;
-        console.log("OUTPUT weather Found", value.weather.description);
         value.cities.push(restCity);
         return JSON.stringify(value) + ",";
       }
@@ -35,14 +38,11 @@ module.exports = async function processCityStream(city, output_file) {
     auxStream,
   ]);
 
+  //Esperar que se termine de escanear outputData
   await new Promise((resolve) =>
     outputStream.on("end", async () => {
-      //copy aux_file into output_file.
-      renameSync("aux_file", output_file);
-      console.log("End Promise");
+      renameSync(AUX_PATH, output_file);
       resolve();
     })
   );
-
-  console.log("END INPUT CHUNK");
 };
