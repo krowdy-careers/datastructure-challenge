@@ -1,0 +1,24 @@
+{
+  "name": "datastrucure-challenge",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "<h1 align=\"center\"> Data Structure Challenge </h1> <h3 align=\"center\"> Instrucciones para la tarea de estructura de datos </h3> <h5 align=\"center\"> Telemática - <a href=\"#\">Challenge</a> (Setiembre 2022) </h5>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Edax97/datastructure-challenge.git"
+  },
+  "author": "Edmar Campos Alarcon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Edax97/datastructure-challenge/issues"
+  },
+  "homepage": "https://github.com/Edax97/datastructure-challenge#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.17",
+    "jest": "^29.3.1"
+  }
+}
