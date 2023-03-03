@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+:root{
+    --card:#e0e0e0;
+    --card-temp-min: #0ebc9a;
+    --card-temp-max: #b1600f;
+    --button-color: #212121;
+    --button-background: #e8e8e8;
+    --button-shadow: rgba(0,0,0,0.27);
+    --shadow: #bebebe;
+    --white: #ffffff;
+    --krowdy: #ff8b08;
+    --bgbody: #fff6ef;
+    --subtitle: #172334;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background: var(--bgbody);
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    padding: 2%;
+    color: var(--krowdy);
+}
+
+h2{
+    text-decoration: underline;
+    padding: 1%;
+    color: var(--subtitle);
+}
+
+label{
+    display: flex;
+    padding: 0.5%;
+    gap: 10px;
+}
+
+h3{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    font-size: 30px;
+    color: var(--subtitle);
+}
+
+input{
+    border-radius: 5px;
+    height: 30px;
+}
+
+.container_card{
+    margin-top: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 22rem;
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3%;
+    margin: 3%;
+    gap: 10px;
+    width: 100%;
+    border-radius: 30px;
+    background: var(--card);
+    box-shadow: 15px 15px 30px var(--shadow),
+                -15px -15px 30px var(--white);
+}
+
+.card_temp-min{
+    color: var(--card-temp-min);
+}
+
+.card_temp-max{
+    color: var(--card-temp-max);
+}
+
+button {
+    padding: 5px 15px;
+    margin-top: 10px;
+    border: unset;
+    border-radius: 15px;
+    color: var(--button-color);
+    z-index: 1;
+    background: var(--button-background);
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px var(--button-shadow);
+    box-shadow: 4px 8px 19px -3px var(--button-shadow);
+    transition: all 250ms;
+    overflow: hidden;
+   }
+   
+   button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: var(--button-color);
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px var(--button-shadow);
+    box-shadow: 4px 8px 19px -3px var(--button-shadow);
+    transition: all 250ms
+   }
+   
+   button:hover {
+    color: var(--button-background);
+   }
+   
+   button:hover::before {
+    width: 100%;
+   }
