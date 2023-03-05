@@ -44,8 +44,6 @@ const sortedCities = groupByWeather(jsonObject.cities)
 
 const fs = require('fs');
 
-// Tu código para procesar los datos y obtener el resultado
-
 const resultJSON = JSON.stringify(sortedCities, null, 2);
 
 fs.writeFile('output.json', resultJSON, err => {
