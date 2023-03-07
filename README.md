@@ -1,3 +1,7 @@
+### Solution
+<p>Lo recomendable sería crear un seeder para enviarlo a mongo y de ahpi ir leyendo poco a poco</p>
+<p>Toda la solución que se pudo hasta el momento esta en src/index.js</p>
+
 
 <h1 align="center"> Data Structure Challenge </h1>
 <h3 align="center"> Instrucciones para la tarea de estructura de datos </h3>

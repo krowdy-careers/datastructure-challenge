@@ -1,0 +1,28 @@
+{
+  "name": "datastructure-challenge",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> Data Structure Challenge </h1> <h3 align=\"center\"> Instrucciones para la tarea de estructura de datos </h3> <h5 align=\"center\"> Telemática - <a href=\"#\">Challenge</a> (Setiembre 2022) </h5>",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luis-Designs/datastructure-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luis-Designs/datastructure-challenge/issues"
+  },
+  "homepage": "https://github.com/Luis-Designs/datastructure-challenge#readme",
+  "dependencies": {
+    "fastify": "^4.14.1",
+    "fs": "^0.0.1-security",
+    "mongoose": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.21"
+  }
+}
