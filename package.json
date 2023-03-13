@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "datastructure-challenge",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\"> Data Structure Challenge </h1>\r <h3 align=\"center\"> Instrucciones para la tarea de estructura de datos </h3>\r <h5 align=\"center\"> Telemática - <a href=\"#\">Challenge</a> (Setiembre 2022) </h5>",
+  "main": "processDataStructure.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarcoAntonio159/datastructure-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarcoAntonio159/datastructure-challenge/issues"
+  },
+  "homepage": "https://github.com/MarcoAntonio159/datastructure-challenge#readme",
+  "dependencies": {
+    "JSONStream": "^1.3.5",
+    "kmeans-js": "^0.1.2",
+    "lodash": "^4.17.21"
+  }
+}
