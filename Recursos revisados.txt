@@ -1,0 +1,9 @@
+https://www.w3schools.com/js/js_json_parse.asp
+https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object/values
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
+
+Apuntes personales:
+https://carterperz.notion.site/PROGRAMACION-ORIENTADA-A-OBJETOS-62142fd27d294f12a53466cd4f07f0da
+https://carterperz.notion.site/ACORDEON-QUIZ-JAVASCRIPT-cc157f85d08441bab33d5ae387fb8d55 
+https://carterperz.notion.site/JavaScript-Esencial-a2096a2dd8d24b089ead4210e3d3987e
